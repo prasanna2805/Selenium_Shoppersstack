@@ -57,12 +57,13 @@ public class BaseTest {
 	public void beforeclass() throws Exception {
 		System.out.println("@before class_______________browser launched");
 
-		String browser = utility.loaddatafromPropertyfile("browsername");
-		String url = utility.loaddatafromPropertyfile("url");
+//		String browser = utility.loaddatafromPropertyfile("browsername");
+//		String url = utility.loaddatafromPropertyfile("url");
 		
 		//to run via Parameters in CMD we need to give below system.get property
-//		String browser = System.getProperty("browsername");
-//		String url=System.getProperty("url");
+		//syntax for CMD: mvn test -Dbrowser=chrome -durl=https://www.shoppersstack.com
+		String browser = System.getProperty("browsername");
+		String url=System.getProperty("url");
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
