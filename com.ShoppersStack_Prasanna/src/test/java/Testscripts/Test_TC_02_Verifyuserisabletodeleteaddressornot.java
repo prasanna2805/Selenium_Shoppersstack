@@ -23,6 +23,7 @@ public class Test_TC_02_Verifyuserisabletodeleteaddressornot extends BaseTest {
 		Thread.sleep(2000);
 		profiles.getYesbtn().click();
 		wait.until(ExpectedConditions.alertIsPresent());
+		System.out.println("Alert handled");
 		Thread.sleep(2000);
 		driver.switchTo().alert().accept();
 
